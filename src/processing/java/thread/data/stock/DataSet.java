@@ -18,7 +18,6 @@ import java.util.regex.Pattern;
 /**
  * data set is local structured representation of the data set
  *
- * @author  brian dunne
  * @version 0.0
  * @since   2020-04-10
  */
@@ -79,7 +78,6 @@ public class DataSet extends Thread{
      * @param index of entry
      * @return entry@ index
      *
-     * @author  brian dunne
      */
     public Entry get(int index) {
         if(entries!=null) {
@@ -109,7 +107,6 @@ public class DataSet extends Thread{
      * @param higher higher limit
      * @return new dataSet containing entries between
      *
-     * @author  brian dunne
      */
     public DataSet subset(int lower, int higher){
         if(lower<0||higher>getSize()||lower>higher){
@@ -129,7 +126,6 @@ public class DataSet extends Thread{
      * @param group group to look for
      * @return new dataSet corresponding with the group
      *
-     * @author  brian dunne
      */
     public DataSet getGroup(Group group){
         return subset(group.start, group.end);
@@ -139,7 +135,6 @@ public class DataSet extends Thread{
      * @param index index of group
      * @return new data corresponding with the group index
      *
-     * @author  brian dunne
      */
     public DataSet getGroup(int index){
         Group group = groups.get(index);
@@ -150,7 +145,6 @@ public class DataSet extends Thread{
      * gets the number of groups in the data set
      * @return number of groups
      *
-     * @author  brian dunne
      */
     public int nGroups(){
         return groups.size();
@@ -165,7 +159,6 @@ public class DataSet extends Thread{
      * gets length of entries
      * @return int entries.length
      *
-     * @author  brian dunne
      */
     public int getSize() {
         return entries.length;
@@ -185,7 +178,6 @@ public class DataSet extends Thread{
      * @param container container to populate
      * @param depth nth sub container
      *
-     * @author brian dunne
      */
     private void populateContainer(Container container, int depth){
         if(groups.size()<=1){
@@ -220,7 +212,6 @@ public class DataSet extends Thread{
      * public access of populate container first clears it then
      * @param container container to populate
      *
-     * @author brian dunne
      */
     public void populateContainer(Container container){
         container.clear();
