@@ -12,7 +12,6 @@ import processing.java.objects.widget.Widget;
 /**
  * personalised mouse event handler
  *
- * @author  brian dunne
  * @version 0.0
  * @since   2020-04-10
  */
@@ -33,7 +32,6 @@ public class Mouse extends HitBox {
      * retrieves the existing event
      * @param e processing key event
      *
-     * @author  brian dunne
      */
     public void mouseEvent(MouseEvent e) {
         switch(e.getAction()) {
@@ -58,7 +56,6 @@ public class Mouse extends HitBox {
      * personalised response to a mouse wheel event, applies an appropriate scroll action on the overObject if it implements the scrollable interface.
      * @param e event in question, used to find the direction of scroll and additional function arguments 'ctrl', 'ctrl-alt'
      *
-     * @author  brian dunne
      */
     private void mouseWheel(MouseEvent e) {
         if(overObject instanceof IScrollable){
@@ -78,7 +75,6 @@ public class Mouse extends HitBox {
      * personalised response to a mouse move event, updates the position of this mouse
      * @param e event in question, used to find the position of the mouse as of event
      *
-     * @author  brian dunne
      */
     private void mouseMove(MouseEvent e) {
         position = new Vector(e.getX(),e.getY());
@@ -95,7 +91,6 @@ public class Mouse extends HitBox {
      * TODO allow the object to decide whether it wants to be moved or not
      * @param e event in question, finds the position of x as of event
      *
-     * @author  brian dunne
      */
     private void mouseDrag(MouseEvent e) {
         position = new Vector(e.getX(),e.getY());
@@ -108,7 +103,6 @@ public class Mouse extends HitBox {
      * personalised response to a mouse pressed event, moves over object to heldObject, finds object position relative to mouse and informs said object that it has been clicked
      * @param e event in question, honestly not used in this event at the time of writing this cement
      *
-     * @author  brian dunne
      */
     private void mousePress(MouseEvent e) {
         locked = true;
@@ -124,8 +118,7 @@ public class Mouse extends HitBox {
     /**
      * personalised response to a mouse release event, resets heldObject, offset and locked, informs said object that it is no longer being held by the mouse
      * @param e event in question
-     *
-     * @author  brian dunne
+     
      */
     private void mouseRelease(MouseEvent e) {
         if (heldObject instanceof Widget) {
@@ -143,7 +136,6 @@ public class Mouse extends HitBox {
      * @param hitBox hitBox checking if it should be the over hitBox this
      * @param context code/ parent/ relative position of the hitBox within some 'context' where it may appear in some another context, eg minimiser. currently disabled as context filter doesn't work
      *
-     * @author  brian dunne
      */
     public boolean setOverObject(HitBox hitBox, int context){
         if (heldObject==null&&!locked && collide(hitBox)){
@@ -167,7 +159,6 @@ public class Mouse extends HitBox {
      * old interface of setOverObject, allows use of function where context is irrelevant
      * @param hitBox cobjec checking to be over hitBox
      *
-     * @author  brian dunne
      */
     public boolean setOverObject(HitBox hitBox){
         return setOverObject(hitBox, 0);
@@ -177,7 +168,6 @@ public class Mouse extends HitBox {
      * retrieves the current held object
      * @return heldObject
      *
-     * @author  brian dunne
      */
     public PObject getHeldObject() {
         return heldObject;
@@ -186,8 +176,7 @@ public class Mouse extends HitBox {
     /**
      * retrieves dictated connect of most recent over object
      * @return int code representing context
-     *
-     * @author  brian dunne
+     
      */
     public int getContext() {
         return context;
