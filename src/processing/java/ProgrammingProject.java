@@ -22,7 +22,6 @@ import java.util.ArrayList;
 /**
  * this is the main
  *
- * @author brian dunne,
  * @version 0.0
  * @since   2020-04-10
  */
