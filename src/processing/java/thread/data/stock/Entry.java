@@ -14,7 +14,6 @@ import java.util.regex.Pattern;
 /**
  * entry represents an entry within the data set
  *
- * @author  brian dunne
  * @version 1.0
  * @since   2020-04-10
  */
@@ -56,7 +55,6 @@ public class Entry implements Comparable<Entry>, Cloneable{
      * Entry constructor, throws an exception if the string doesn't match
      * @param entry builds an entry from a string
      *
-     * @author  brian dunne
      */
     public Entry(String entry){
         Matcher dataMatcher = Pattern.compile( "(?:([A-Z]+),)(?:"+ Util.R_F+",)(?:"+ Util.R_F+",)(?:"+ Util.R_F+",)(?:"+ Util.R_F+",)(?:"+ Util.R_F+",)(?:([+-]?\\d+),)" +
@@ -101,7 +99,6 @@ public class Entry implements Comparable<Entry>, Cloneable{
      * @return new array of widgets
      * @param colors group of colors to apply to the widgets, defaults to empty
      *
-     * @author  brian dunne
      */
     Widget[] getWidgets(Color... colors){
         if(dateTime!=null) {
@@ -121,7 +118,6 @@ public class Entry implements Comparable<Entry>, Cloneable{
      * greats a string matching the structure provided to create this object
      * @return string formatted with delimiter ',\n'
      *
-     * @author  brian dunne
      */
     @Override
     public String toString() {
@@ -133,7 +129,6 @@ public class Entry implements Comparable<Entry>, Cloneable{
      * @param o other entry
      * @return numeric value that describes the difference between this and o
      *
-     * @author  brian dunne
      */
     @Override
     public int compareTo(Entry o) {
@@ -147,8 +142,6 @@ public class Entry implements Comparable<Entry>, Cloneable{
     /**
      * create an identical copy od the entry
      * @return new entry
-     *
-     * @author  brian dunne
      */
     @Override
     public Entry clone(){
@@ -165,8 +158,7 @@ public class Entry implements Comparable<Entry>, Cloneable{
      *  gets a numeric value for a component
      * @param component string name of component
      * @return float representing the magnitude of the component
-     *
-     * @author  brian dunne
+     
      */
     public float get(String component) {
         if(dateTime!=null) {
