@@ -9,7 +9,6 @@ import processing.java.util.Color;
  * 2d hit box, collisions between 2d objects
  * superclass of all buttons/widgets/containers, by default, it's just a rectangle.
  *
- * @author  brian dunne
  * @version 0.0
  * @since   2020-04-10
  */
@@ -49,7 +48,6 @@ public class HitBox implements Cloneable{
      * returns updated hitBox height based on screen height, called in every hitBox & hitBox subclass draw function
      * @return some h
      *
-     * @author  E McDonald
      */
     public int getH() {
         return (int) (H/1000f*ProgrammingProject.processing.height);
@@ -58,7 +56,6 @@ public class HitBox implements Cloneable{
      * returns updated hitBox width based on screen width, called in every hitBox & hitBox subclass draw function
      * @return some h
      *
-     * @author E McDonald
      */
     public int getW() {
         return (int) (W/1000f*ProgrammingProject.processing.width);
@@ -68,7 +65,6 @@ public class HitBox implements Cloneable{
      * checks if hotbox has reached thw wall with 0 tolerance
      * @return int code representing what walls
      *
-     * @author  brian dunne
      */
     protected int wallHit(){return wallHit(0.0f);}
 
@@ -80,7 +76,6 @@ public class HitBox implements Cloneable{
      * // 10 00 20
      * // 12 02 22
      *
-     * @author  brian dunne
      */
     protected int wallHit(float tolerance){
 
@@ -105,7 +100,6 @@ public class HitBox implements Cloneable{
      * @param other hit box to be checked
      * @return boolean whether it hits or not
      *
-     * @author  brian dunne
      */
     protected boolean collide(HitBox other){
         return topLeft().X < other.bottomRight().X &&
@@ -119,7 +113,6 @@ public class HitBox implements Cloneable{
      * gets the top left corner of a hit box
      * @return Vector of the top left corner
      *
-     * @author  brian dunne, E McDonald
      */
     public Vector topLeft(){
         return new Vector(position.X - ((W/2000f)*ProgrammingProject.processing.width), position.Y - ((H/2000f)*ProgrammingProject.processing.height));
@@ -128,7 +121,6 @@ public class HitBox implements Cloneable{
      * gets the top bottom right of a hit box
      * @return Vector of the bottom right corner
      *
-     * @author  brian dunne, E McDonald
      */
     public Vector bottomRight(){
         return new Vector(position.X + ((W/2000f)*ProgrammingProject.processing.width), position.Y + ((H/2000f)*ProgrammingProject.processing.height));
@@ -138,7 +130,6 @@ public class HitBox implements Cloneable{
      * default method of displaying a hit box, uses angle and position
      * @param graphics graphics to draw on
      *
-     * @author  brian dunne
      */
     public void show(PGraphics graphics){
         graphics.pushMatrix();
@@ -152,7 +143,6 @@ public class HitBox implements Cloneable{
      * default image to draw for hit box
      * @param graphics to draw on
      *
-     * @author  brian dunne
      */
     public void sprite(PGraphics graphics){
         graphics.fill(200);
