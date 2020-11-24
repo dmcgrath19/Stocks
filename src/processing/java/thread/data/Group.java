@@ -5,7 +5,6 @@ import processing.java.thread.BuildDataSet;
 /**
  * group describes reasonable sub divisions of the data set
  *
- * @author brian dunne
  * @version 1.0
  * @since   2020-04-10
  */
@@ -37,7 +36,6 @@ public class Group implements Comparable<Group>{
      * @param o other group
      * @return int representing difference
      *
-     * @author brian dunne
      */
     @Override
     public int compareTo(Group o) {
@@ -56,7 +54,6 @@ public class Group implements Comparable<Group>{
      * @param obj other object
      * @return boolean true if the object is a group and it compares to having no difference
      *
-     * @author brian dunne
      */
     @Override
     public boolean equals(Object obj) {
