@@ -7,7 +7,6 @@ import java.util.regex.Pattern;
 /**
  *personalised date time because java calender doesn't have much positive feed back
  *
- * @author brian dunne
  * @version 0.0
  * @since   2020-04-10
  */
@@ -57,7 +56,6 @@ public class DateTime implements Comparable<DateTime>{
      * @param o other DateTime
      * @return int representing difference
      *
-     * @author brian dunne
      */
     @Override
     public int compareTo(DateTime o) {
@@ -79,7 +77,6 @@ public class DateTime implements Comparable<DateTime>{
      * @param o other date to count from
      * @return int number of days
      *
-     * @author brian dunne
      */
     public int daysBetween(DateTime o) { //returns number of days between two DateTimes
         int days = 0;
@@ -109,7 +106,6 @@ public class DateTime implements Comparable<DateTime>{
      * @param year year, to account for february
      * @return int days in the month
      *
-     * @author brian dunne
      */
     public static int daysInMonth(int month, int year){
         switch (month){
