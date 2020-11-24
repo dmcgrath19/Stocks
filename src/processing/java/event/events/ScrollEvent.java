@@ -2,7 +2,6 @@ package processing.java.event.events;
 /**
  * contains the information required recieve the event
  *
- * @author  brian dunne
  * @version 0.0
  * @since   2020-04-10
  */
