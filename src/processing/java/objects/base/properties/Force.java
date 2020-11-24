@@ -3,7 +3,6 @@ package processing.java.objects.base.properties;
 /**
  * component to physical objects
  *
- * @author  brian dunne
  * @version 1.0
  * @since   2020-04-10
  */
@@ -21,7 +20,6 @@ public class Force implements Cloneable{
      * adds another force to this one
      * @param other force to add to this
      *
-     * @author  brian dunne
      */
     public void add(Force other){
         this.vector.add(other.vector.mul(other.weight/weight));
@@ -32,7 +30,6 @@ public class Force implements Cloneable{
      * implementation of the clone interface
      * @return copy of this
      *
-     * @author  brian dunne
      */
     @Override
     public Force clone(){
