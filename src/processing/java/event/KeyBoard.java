@@ -8,7 +8,6 @@ import java.util.ArrayList;
 /**
  * more personalised keyboard event handler
  *
- * @author  brian dunne
  * @version 0.0
  * @since   2020-04-10
  */
@@ -42,7 +41,6 @@ public class KeyBoard {
      * personalised action in response to a key released event
      * @param event event in question, used to find out what key was released
      *
-     * @author  brian dunne
      */
     private void keyReleased(KeyEvent event) {
         char c = event.getKey();
@@ -65,7 +63,6 @@ public class KeyBoard {
      * personalise action in response to a key pressed event
      * @param event event in question, used to find out what key was pressed
      *
-     * @author  brian dunne
      */
     private void keyPressed(KeyEvent event) {
         char c = event.getKey();
@@ -86,7 +83,6 @@ public class KeyBoard {
      * @param key char to check
      * @return boolean whether it is in the list or not
      *
-     * @author  brian dunne
      */
     public boolean carActive(char key) {
         return activeChars.contains(key);
@@ -109,7 +105,6 @@ public class KeyBoard {
      *
      * @param c character to check
      *
-     * @author  brian dunne
      */
     private void specialKeyCheck(char c){// add special key event here, maby changable with settings
         switch (c){
