@@ -10,7 +10,6 @@ import processing.java.util.Color;
 /**
  *2d physical object extends hatbox for image support and be subject to forces
  *
- * @author  brian dunne
  * @version 0.0
  * @since   2020-04-10
  */
@@ -46,7 +45,6 @@ public class PObject extends HitBox {
      * default method for ticking an object, used when an object has an action once per tick rather than once per draw
      * @param eForce to be applied to the object
      *
-     * @author  brian dunne
      */
     public void tick(Force eForce){
         ProgrammingProject.mouse.setOverObject(this);
@@ -66,7 +64,6 @@ public class PObject extends HitBox {
      * override sprite to use images instead,
      * @param graphics to draw on
      *
-     * @author  brian dunne
      *
      */
     @Override
@@ -78,8 +75,7 @@ public class PObject extends HitBox {
      * method of getting the objects image.
      * @param index index/state of the object
      * @return image corresponding to index
-     *
-     * @author  brian dunne
+     
      */
     public PImage getResource(int index){
         try{
@@ -109,7 +105,6 @@ public class PObject extends HitBox {
      * extracts the hit box out of the object, used in bug testing to see the hit boxes
      * @return hitbox
      *
-     * @author  brian dunne
      */
     public HitBox cloneHitBox(){
         return new HitBox(position,getW(),getH());
@@ -119,7 +114,6 @@ public class PObject extends HitBox {
      * public access to color
      * @return this.color
      *
-     * @author  brian dunne
      */
     public Color getColour(){
         return colour;
@@ -129,7 +123,6 @@ public class PObject extends HitBox {
      * method for constructing an image for a state where there isn't allredy one
      * @return image for that state
      *
-     * @author  brian dunne
      */
     private PImage buildImage(){
         PGraphics graphics = ProgrammingProject.processing.createGraphics(getW(),getH());
@@ -144,7 +137,6 @@ public class PObject extends HitBox {
      * this is used because java struggles with font rendering and this helps with lag
      * @param graphics graphic to draw on
      *
-     * @author  brian dunne
      */
     public void drawOn(PGraphics graphics){
         graphics.fill(colour.toInt());
