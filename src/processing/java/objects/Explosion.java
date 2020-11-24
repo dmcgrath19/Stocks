@@ -11,7 +11,6 @@ import processing.java.util.Color;
 /**
  * just a gimickey explosion effect
  * /TODO finish comenting
- * @author brian dunne
  * @version 0.0
  * @since   2020-04-10
  */
