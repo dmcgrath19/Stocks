@@ -3,7 +3,6 @@ package processing.java.objects.base.properties;
 /**
  *personalised 2d vector
  *
- * @author  brian dunne, delia mcgrath
  * @version 1.0
  * @since   2020-04-10
  */
@@ -19,7 +18,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * @param other vector to add to this
      * @return this
      *
-     * @author  brian dunne
      */
     public Vector add(Vector other){
         this.X += other.X;
@@ -32,7 +30,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * @param a adds to x
      * @param b adds to y
      * @return this
-     * @author delia mcgrath
      */
     public Vector add(float a, float b){
         X += a;
@@ -45,7 +42,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * @param i to multiply across all values in this
      * @return this
      *
-     * @author  brian dunne
      */
     public Vector mul(float i){
         X *= i;
@@ -58,7 +54,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * @param v vector to multiply this by
      * @return this
      *
-     * @author  brian dunne
      */
     public Vector mul(Vector v){
         X *= v.X;
@@ -70,7 +65,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * implementation of the clone interface
      * @return copy of this
      *
-     * @author  brian dunne
      */
     @Override
     public Vector clone(){
@@ -88,7 +82,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * @param angle to rotate by
      * @return this
      *
-     * @author  brian dunne
      */
     Vector rotate(float angle){
         float hX= (float) (Math.cos(angle)*X-Math.sin(angle)*Y);
@@ -101,7 +94,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * absolute distance form 0,0
      * @return float distance
      *
-     * @author  brian dunne
      */
     float abs(){
         return (float) Math.sqrt((X*X)+(Y*Y));
@@ -112,7 +104,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * @param ov other vector to get distance from this
      * @return float distance form ov
      *
-     * @author  brian dunne
      */
     public float abs(Vector ov){
         return new Vector(this.X-ov.X,this.Y-ov.Y).abs();
@@ -123,7 +114,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * @param ov other vector
      * @return float angle in rads
      *
-     * @author  brian dunne
      */
     float getAngle(Vector ov){
         float op = ov.Y-Y;
@@ -135,7 +125,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * implementation of toString
      * @return a string representation of the vector
      *
-     * @author  brian dunne
      */
     @Override
     public String toString() {
@@ -147,7 +136,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * @param o other vector
      * @return int representing the difference
      *
-     * @author  brian dunne
      */
     @Override
     public int compareTo(Vector o) {
@@ -162,7 +150,6 @@ public class Vector implements Comparable<Vector>, Cloneable{
      * set x,y
      * @param x new x
      * @param y new y
-     * @author delia mcgrath
      */
     public void changePosition(float x, float y) {  //Little function for changing x and y.
         X=x;
