@@ -11,7 +11,6 @@ import static processing.java.objects.widget.button.Button.SETTING_BUTTON;
 
 /**
  * Screen: Contains ArrayList of widgets, different screens can contain/display different ArrayLists.
- * @author delia mcgrath
  * @version 0.0
  * @since   2020-04-10
  */
@@ -30,7 +29,6 @@ public class Screen {
     /**
      * puts background first and then draws everything on top of it
      *so it can be seen
-     * @author delia mcgrath
      */
 
     public void draw() {
@@ -46,7 +44,6 @@ public class Screen {
      * be able to add widgets onto the main screen
      * so that the code can run smoothly and be more readable
      *
-     * @author delia mcgrath
      */
     public void addWidget(Widget newWidget)
     {
@@ -56,7 +53,6 @@ public class Screen {
     /**
      * allow to modify the private variable color
      *
-     * @author delia mcgrath
      */
     public void setScreenColor(Color color){
         backgroundColor = color;
@@ -65,7 +61,6 @@ public class Screen {
     /**
      * be able to put a customization onto any screen
      *
-     * @author delia mcgrath
      */
     public void addCustomization(Customization customization){this.customization = customization;}
 
