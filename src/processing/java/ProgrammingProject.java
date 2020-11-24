@@ -106,7 +106,6 @@ public class ProgrammingProject extends PApplet{
     /**
      * Updates screen height & width and middleOfScreen.
      *
-     * @author E McDonald
      */
     private void checkForResize(){
         if(height < MIN_HEIGHT) {
@@ -122,7 +121,6 @@ public class ProgrammingProject extends PApplet{
      *adds an object to the tick list
      * @param object object to add
      *
-     * @author brian dunne
      */
     public void addObject(PObject object){
         objects.add(object);
