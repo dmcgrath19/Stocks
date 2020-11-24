@@ -17,7 +17,6 @@ import java.util.Collections;
 /**
  *reads and constructs a more structured representation of a DataSet in the background.
  *
- * @author  brian dunne
  * @version 0.0
  * @since   2020-04-10
  */
@@ -35,7 +34,6 @@ public class BuildDataSet extends Thread{
      * @param file containing data set to try adding
      * throws exception if builder array is currently full
      *
-     * @author  brian dunne
      */
     public static void addBuilder(File file){
         for(int i=0; i< dataSetBuilders.length; i++){
@@ -52,7 +50,6 @@ public class BuildDataSet extends Thread{
      * @param fileName name of file in default directory to try adding
      * throws exception if builder array is currently full
      *
-     * @author  brian dunne
      */
     public static void addBuilder(String fileName){
         addBuilder(ProgrammingProject.DATA_DIRECTORY_PATH+"\\dataSets", fileName);
@@ -63,7 +60,6 @@ public class BuildDataSet extends Thread{
      * @param fileName name of file in default directory to try adding
      * throws exception if builder array is currently full
      *
-     * @author  brian dunne
      */
     public static void addBuilder(String parentDirectory, String fileName){
         addBuilder(new File(parentDirectory, fileName));
@@ -72,7 +68,6 @@ public class BuildDataSet extends Thread{
      * checks the array of builders to se if any are ready
      * @return returns ArrayList of data sets that were ready
      *
-     * @author  brian dunne
      */
     public static DataSet retrieveDataSet() {
         for(int i=0; i< dataSetBuilders.length; i++){
@@ -92,7 +87,6 @@ public class BuildDataSet extends Thread{
      * runs access and display tests on data set. can be personalised
      * @param testSet set to run tests on
      *
-     * @author  brian dunne
      */
     private static void basicTest(DataSet testSet){
         if(testSet.name.contains(STOCKS)){
@@ -148,7 +142,6 @@ public class BuildDataSet extends Thread{
      * what the thread will work on
      * building the data set
      *
-     * @author  brian dunne
      */
     @Override
     public void run() {
@@ -196,7 +189,6 @@ public class BuildDataSet extends Thread{
      * getDataSet checks if the data set is ready
      * @return complete data set or null
      *
-     * @author  brian dunne
      */
     public DataSet getDataSet() {
         return ready? dataSet: null;
@@ -211,7 +203,6 @@ public class BuildDataSet extends Thread{
      * probeProgress calculates the red file over file size
      * @return float that represents percentage
      *
-     * @author  brian dunne
      */
     public float probeProgress(){
         return (float) ((fileRead /fileSize)*100);
@@ -220,7 +211,6 @@ public class BuildDataSet extends Thread{
     /**
      * pauses this thread and makes executing thread wait till this reached it's pause
      *
-     * @author  brian dunne
      */
     public void pause(){
         paused = true;
@@ -230,7 +220,6 @@ public class BuildDataSet extends Thread{
     /**
      * un-pauses this thread
      *
-     * @author  brian dunne
      */
     public void unPause(){
         paused = false;
@@ -244,7 +233,6 @@ public class BuildDataSet extends Thread{
      * pauses this thread then builds a data set out of the known information and un-pauses this thread
      * @return portion of the data set that is ready
      *
-     * @author  brian dunne
      */
     public DataSet getReadySet(){ // it's here only because i wanted to se if i could tbh, it slows the process down and dos'nt help much but if it has a uce go ahead
         this.pause();
