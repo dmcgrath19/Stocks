@@ -5,7 +5,6 @@ import processing.core.PImage;
 /**
  * functions
  *
- * @author  brian dunne
  * @version 1.0
  * @since   2020-04-10
  */
@@ -17,7 +16,6 @@ public class Util {
      * @param image image reference
      * @return shadow of original image with alpha 0x4F
      *
-     * @author brian dunne
      */
     public static PImage getfader(PImage image){
         PImage shadow = image.copy();
@@ -36,7 +34,6 @@ public class Util {
      * @param image reference image
      * @return traced outline of the image
      *
-     * @author brian dunne
      */
     public static PImage getBorder(PImage image) {
         PImage border = image.copy();
@@ -61,7 +58,6 @@ public class Util {
      * @param image reference image
      * @return boolean if the picel is close to a transparent t pixel or not
      *
-     * @author brian dunne
      */
     private static boolean borderPixel(int x, int y, int borderSize, PImage image){
         if(image.get(x,y)==0){
@@ -89,7 +85,6 @@ public class Util {
      * @param array array to role
      * @param roll amount to role
      *
-     * @author brian dunne
      */
     public static void rollArray(Object[] array, int roll) {
         Object prevoius = null;
@@ -111,7 +106,6 @@ public class Util {
      * @param uRange upper limit of range
      * @return new i after translation
      *
-     * @author brian dunne
      */
     public static int rollInt(int i, int amount, int lRange, int uRange){
         if(lRange>uRange){
