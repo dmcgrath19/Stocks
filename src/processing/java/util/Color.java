@@ -3,7 +3,6 @@ package processing.java.util;
 /**
  * personalised representation of color, personalised methods
  *
- * @author brian dunne
  * @version 0.0
  * @since   2020-04-10
  */
@@ -43,7 +42,6 @@ public class Color{
      * @param color color to modify
      * @return new color with same rgb and new alpha
      *
-     * @author brian dunne
      */
     public static Color setTransparency(double percentAlpha, Color color){
         return new Color(color.red, color.green, color.blue, (color.alpha*255)*percentAlpha/100);
@@ -55,7 +53,6 @@ public class Color{
      * @param add constant to add to color
      * @return new color with brightness offset by the constant
      *
-     * @author brian dunne
      */
     public static Color add(Color aug, int add){
         return new Color(Math.min(Math.max(aug.red+add,0),255), Math.min(Math.max(aug.green+add,0),255), Math.min(Math.max(aug.blue+add,0),255));
@@ -66,7 +63,6 @@ public class Color{
      * @param aug color to subtract from white
      * @return new different color
      *
-     * @author brian dunne
      */
     public static Color flip(Color aug){
         return new Color(Math.max(255-aug.red,0),Math.max(255-aug.green,0),Math.max(255-aug.blue,0));
@@ -78,7 +74,6 @@ public class Color{
      * @param colorB to the other
      * @return boolean whether this method finds the colors to be similar
      *
-     * @author brian dunne
      */
     public static boolean similarColors(Color colorA, Color colorB) {
         int difARG = (int) Math.abs(colorA.red-colorA.green);
@@ -123,7 +118,6 @@ public class Color{
      * converts the color to an int
      * @return int ARGB representation of color
      *
-     * @author brian dunne
      */
     public int toInt() {
         int color = 0;
@@ -138,7 +132,6 @@ public class Color{
      * to string
      * @return string representation pf color
      *
-     * @author brian dunne
      */
     @Override
     public String toString(){
@@ -149,7 +142,6 @@ public class Color{
      * return color as an int array
      * @return integer array{red,green,blue}
      *
-     * @author brian dunne
      */
     public int[] get(){
         return new int[]{(int) red, (int) green, (int) blue};
